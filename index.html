@@ -10,6 +10,16 @@
   </head>
   <body>
     <h1>Water Your Plants!</h1>
-    <div hx-get="/is-watered" hx-trigger="load"></div>
+    <div 
+      hx-get="/is-watered" 
+      hx-trigger="load, every 10s"
+      id="watered-info"
+    >
+
+    </div>
+    <button 
+      hx-post="/is-watered"
+      hx-target="#watered-info"
+    >I Watered Them!</button>
   </body>
 </html>
